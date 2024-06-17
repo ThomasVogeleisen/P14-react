@@ -1,8 +1,14 @@
-# React + Vite
+# OpenClassrooms Projet 14 - HRnet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Faites passer une librairie jQuery vers React
 
-Currently, two official plugins are available:
+## Technologies utilisées
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Javascript
+- React
+- Vite
+- Redux
+
+### Auteur
+
+Thomas Vogeleisen
