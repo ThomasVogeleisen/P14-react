@@ -2,6 +2,7 @@ import './style.css'
 import { Link } from 'react-router-dom'
 import { department, states } from '../../utils/selectList'
 import Select from 'react-select'
+import DateSelect from '../../components/DateSelect'
 
 export function Home() {
   return (
@@ -20,10 +21,10 @@ export function Home() {
           <input type="text" id="last-name" />
 
           <label htmlFor="date-of-birth">Date of Birth</label>
-          <input id="date-of-birth" type="text" />
+          <DateSelect />
 
           <label htmlFor="start-date">Start Date</label>
-          <input id="start-date" type="text" />
+          <DateSelect />
 
           <fieldset className="address">
             <legend>Address</legend>
