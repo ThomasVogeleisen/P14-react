@@ -3,10 +3,20 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import 'dayjs/locale/fr'
 
-export default function DateSelect() {
+import PropTypes from 'prop-types'
+
+export default function DateSelect({ setValue }) {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="fr">
-      <DatePicker />
+      <DatePicker
+        sx={{ width: 1 }}
+        defaultValue={null}
+        onChange={(newValue) => setValue(newValue)}
+      />
     </LocalizationProvider>
   )
+}
+
+DateSelect.propTypes = {
+  setValue: PropTypes.func,
 }
