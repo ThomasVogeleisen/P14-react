@@ -18,6 +18,7 @@ export const columns = [
     name: 'Department',
     selector: (row) => row.department,
     sortable: true,
+    wrap: true,
   },
   {
     name: 'Date of Birth',

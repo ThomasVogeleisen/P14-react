@@ -4,20 +4,23 @@ import { Link } from 'react-router-dom'
 import { department, states } from '../../utils/selectList'
 import Select from 'react-select'
 import DateSelect from '../../components/DateSelect'
+import { Modale } from '../../components/Modale'
 
 export function Home() {
-  const [birthDate, setBirthDate] = useState(dayjs('2022-04-17'))
-  const [startDate, setStartDate] = useState(dayjs('2022-04-17'))
+  const [birthDate, setBirthDate] = useState(dayjs(''))
+  const [startDate, setStartDate] = useState(dayjs(''))
   const [departmentValue, setDepartmentValue] = useState('')
   const [stateValue, setStateValue] = useState('')
+  const [showModal, setShowModal] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const formData = new FormData(e.target)
     const formProps = Object.fromEntries(formData)
     console.log(formProps)
+    setShowModal(true)
   }
-
+  const handleCloseModal = () => setShowModal(false)
   const handleChangeDepartment = (opt) => setDepartmentValue(opt.value)
   const handleChangeState = (opt) => setStateValue(opt.value)
 
@@ -38,6 +41,7 @@ export function Home() {
             type="text"
             id="first-name"
             name="firstname"
+            required
           />
 
           <label htmlFor="last-name" className="form-label">
@@ -48,6 +52,7 @@ export function Home() {
             type="text"
             id="last-name"
             name="lastname"
+            required
           />
 
           <label htmlFor="date-of-birth" className="form-label">
@@ -59,6 +64,7 @@ export function Home() {
             name="birthDate"
             type="hidden"
             value={birthDate.format('DD-MM-YYYY')}
+            required
           />
 
           <label htmlFor="start-date" className="form-label">
@@ -70,6 +76,7 @@ export function Home() {
             name="startDate"
             type="hidden"
             value={startDate.format('DD-MM-YYYY')}
+            required
           />
         </div>
 
@@ -84,18 +91,31 @@ export function Home() {
             type="text"
             className="form-control"
             name="street"
+            required
           />
 
           <label htmlFor="city" className="form-label">
             City
           </label>
-          <input id="city" type="text" className="form-control" name="city" />
+          <input
+            id="city"
+            type="text"
+            className="form-control"
+            name="city"
+            required
+          />
 
           <label htmlFor="state" className="form-label">
             State
           </label>
           <Select options={states} onChange={handleChangeState} />
-          <input id="states" name="states" type="hidden" value={stateValue} />
+          <input
+            id="states"
+            name="states"
+            type="hidden"
+            value={stateValue}
+            required
+          />
 
           <label htmlFor="zip-code" className="form-label">
             Zip Code
@@ -105,6 +125,7 @@ export function Home() {
             type="number"
             className="form-control"
             name="zipcode"
+            required
           />
         </fieldset>
 
@@ -117,6 +138,7 @@ export function Home() {
           name="department"
           type="hidden"
           value={departmentValue}
+          required
         />
         <div className="text-center mt-4">
           <button className="btn btn-primary" type="submit">
@@ -124,6 +146,7 @@ export function Home() {
           </button>
         </div>
       </form>
+      <Modale show={showModal} onClose={handleCloseModal} />
     </div>
   )
 }
