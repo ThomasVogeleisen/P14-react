@@ -25,7 +25,7 @@ export function Home() {
   const handleChangeState = (opt) => setStateValue(opt.value)
 
   return (
-    <div className="container d-flex flex-column align-items-center">
+    <div className="container d-flex flex-column align-items-center mb-5">
       <Link className="btn btn-outline-success btn-sm" to="/employe">
         View Current Employees
       </Link>

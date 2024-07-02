@@ -2,6 +2,8 @@ import { useState } from 'react'
 import DataTable from 'react-data-table-component'
 import { data } from '../../utils/mocksDatas'
 import { columns } from '../../utils/columnsTable'
+import './style.scss'
+import { MobileTable } from '../MobileTable'
 
 export function Tableau() {
   const [filterText, setFilterText] = useState('')
@@ -36,15 +38,20 @@ export function Tableau() {
           style={{ padding: '5px' }}
         />
       </div>
-      <DataTable
-        columns={columns}
-        data={filteredData}
-        defaultSortFieldId={1}
-        highlightOnHover
-        pagination
-        responsive
-        striped
-      />
+      <div className="table-desktop">
+        <DataTable
+          columns={columns}
+          data={filteredData}
+          defaultSortFieldId={1}
+          highlightOnHover
+          pagination
+          responsive
+          striped
+        />
+      </div>
+      <div className="table-mobile">
+        <MobileTable columns={columns} data={filteredData} />
+      </div>
     </div>
   )
 }
