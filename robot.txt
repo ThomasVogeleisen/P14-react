@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /dossier-prive/
+Disallow: /fichiers-temporaires/
+
+Sitemap: http://www.votresite.com/sitemap.xml

@@ -1,8 +1,9 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 
 export function MobileTable({ columns, data }) {
-  console.log(data)
   return (
     <Table className="mt-5">
       <Thead>
@@ -37,4 +38,25 @@ export function MobileTable({ columns, data }) {
       </Tbody>
     </Table>
   )
+}
+
+MobileTable.propTypes = {
+  columns: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      firstName: PropTypes.string.isRequired,
+      lastName: PropTypes.string.isRequired,
+      startDate: PropTypes.string.isRequired,
+      department: PropTypes.string.isRequired,
+      dateOfBirth: PropTypes.string.isRequired,
+      street: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+      state: PropTypes.string.isRequired,
+      zip: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 }

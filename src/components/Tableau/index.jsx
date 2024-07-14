@@ -1,19 +1,21 @@
+import React from 'react'
 import { useState } from 'react'
 import DataTable from 'react-data-table-component'
-import { data } from '../../utils/mocksDatas'
 import { columns } from '../../utils/columnsTable'
 import './style.scss'
 import { MobileTable } from '../MobileTable'
+import { useSelector } from 'react-redux'
 
 export function Tableau() {
+  const employees = useSelector((state) => state.employees)
   const [filterText, setFilterText] = useState('')
-  const [filteredData, setFilteredData] = useState(data)
+  const [filteredData, setFilteredData] = useState(employees)
 
   const handleFilter = (e) => {
     const text = e.target.value
     setFilterText(text)
     setFilteredData(
-      data.filter((item) =>
+      employees.filter((item) =>
         Object.values(item).some((value) =>
           value.toString().toLowerCase().includes(text.toLowerCase()),
         ),
@@ -22,7 +24,7 @@ export function Tableau() {
   }
 
   return (
-    <div>
+    <div data-testid="tableau-component">
       <div
         style={{
           display: 'flex',
