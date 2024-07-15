@@ -1,14 +1,20 @@
-# OpenClassrooms Projet 14 - HRnet
+[![forthebadge](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODcuMzYyNTAzMDUxNzU3OCIgaGVpZ2h0PSIzNSIgdmlld0JveD0iMCAwIDE4Ny4zNjI1MDMwNTE3NTc4IDM1Ij48cmVjdCB3aWR0aD0iMTEyLjIzNzUwMzA1MTc1NzgxIiBoZWlnaHQ9IjM1IiBmaWxsPSIjZjhlNzFjIi8+PHJlY3QgeD0iMTEyLjIzNzUwMzA1MTc1NzgxIiB3aWR0aD0iNzUuMTI1IiBoZWlnaHQ9IjM1IiBmaWxsPSIjMjEyMzJhIi8+PHRleHQgeD0iNTYuMTE4NzUxNTI1ODc4OTA2IiB5PSIyMS41IiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iJ1JvYm90bycsIHNhbnMtc2VyaWYiIGZpbGw9IiMwMDAwMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIyIj5KQVZBU0NSSVBUPC90ZXh0Pjx0ZXh0IHg9IjE0OS44MDAwMDMwNTE3NTc4IiB5PSIyMS41IiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmaWxsPSIjNjFkYWZiIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iOTAwIiBsZXR0ZXItc3BhY2luZz0iMiI+UkVBQ1Q8L3RleHQ+PC9zdmc+)](https://forthebadge.com)
 
-Faites passer une librairie jQuery vers React
+# OpenClassrooms Projet 14 : HRnet
 
-## Technologies utilisées
+Faites passer une librairie jQuery vers React.
+
+## Technologies
 
 - Javascript
 - React
 - Vite
 - Redux
 
-### Auteur
+## Authors
 
-Thomas Vogeleisen
+Thomas Vogeleisen - Etudiant OpenClassrooms
+
+## Licensing
+
+Ce projet provient de la formation Développeur d'application - JavaScript React d'[OpenClassrooms](https://openclassrooms.com/)

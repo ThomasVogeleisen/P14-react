@@ -3,6 +3,14 @@ import PropTypes from 'prop-types'
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 
+/**
+ * MobileTable Genere l'affichage d'un tableau pour les appareils mobiles
+ *
+ * @param {Array} columns - tableau avec les noms des colonnes
+ * @param {Array} data - tableau des données à afficher
+ * @returns {JSX.Element}
+ */
+
 export function MobileTable({ columns, data }) {
   return (
     <Table className="mt-5">

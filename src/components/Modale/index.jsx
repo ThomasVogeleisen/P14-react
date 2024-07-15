@@ -2,6 +2,16 @@ import React from 'react'
 import './style.css'
 import PropTypes from 'prop-types'
 
+/**
+ * Composant React qui affiche une modale.
+ * Il permet à l'utilisateur de savoir si un employé a été ajouté avec succès.
+ *
+ * @param {Object} props - Les propriétés passées au composant Modale.
+ * @param {boolean} props.show - L'état d'affichage de la modale.
+ * @param {function} props.onClose - La fonction à appeler pour fermer la modale.
+ * @returns {JSX.Element}
+ */
+
 export function Modale({ show, onClose }) {
   const showHideClassName = show ? 'bground show-modale' : 'bground hide-modale'
   return (

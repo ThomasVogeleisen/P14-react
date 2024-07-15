@@ -6,11 +6,19 @@ import './style.scss'
 import { MobileTable } from '../MobileTable'
 import { useSelector } from 'react-redux'
 
+/**
+ * Genere l'affichage d'un tableau pour contenir les données des employés
+ * et permettre une recherche dans le tableau ou de le trier par colonne
+ *
+ * @returns {JSX.Element}
+ */
+
 export function Tableau() {
   const employees = useSelector((state) => state.employees)
   const [filterText, setFilterText] = useState('')
   const [filteredData, setFilteredData] = useState(employees)
 
+  // Fonction pour filtrer les données du tableau
   const handleFilter = (e) => {
     const text = e.target.value
     setFilterText(text)

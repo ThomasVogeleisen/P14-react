@@ -18,10 +18,13 @@ export function Home() {
   const [error, setError] = useState(false)
   const [showForm, setShowForm] = useState(true)
 
+  // Fonction pour soumettre le formulaire
   const handleSubmit = (e) => {
     e.preventDefault()
     const formData = new FormData(e.target)
     const formProps = Object.fromEntries(formData)
+
+    // Vérifie si tous les champs sont remplis
     for (const key in formProps) {
       if (formProps[key] === 'undefined' || formProps[key] === '') {
         setError(true)
