@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { department, states } from '../../utils/selectList'
 import Select from 'react-select'
 import DateSelect from '../../components/DateSelect'
-import { Modale } from '../../components/Modale'
+import { Modale } from 'thomas-vogeleisen-modale-component'
 import { useDispatch } from 'react-redux'
 import { addEmployee } from '../../redux/redux'
 
@@ -192,7 +192,12 @@ export function Home() {
           </div>
         </form>
       )}
-      <Modale show={showModal} onClose={handleCloseModal} />
+      <Modale
+        show={showModal}
+        onClose={handleCloseModal}
+        title="Employee Created !"
+        message="You have successfully added a new employee.!"
+      />
     </div>
   )
 }
