@@ -28,7 +28,7 @@
     "react-super-responsive-table": "^5.2.3",
     "redux": "^5.0.1",
     "styled-components": "^6.1.11",
-    "thomas-vogeleisen-modale-component": "^1.2.2"
+    "thomas-vogeleisen-modale-component": "^1.2.4"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.24.8",
